@@ -1,0 +1,15 @@
+name: 'Team Review'
+description: 'Check if PR is reviewed by one of the team members'
+inputs:
+  GITHUB_TOKEN: 
+    description: 'Github Token'
+    required: true
+  team: 
+    description: 'List of handles for team members'
+    required: true
+outputs:
+  reviewed: 
+    description: "Boolean indicating if it's reviewed or not."
+runs:
+  using: 'node12'
+  main: 'index.js'
