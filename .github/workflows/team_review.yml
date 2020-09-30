@@ -1,0 +1,20 @@
+name: Check for X Team review
+
+on: 
+  pull_request:
+    types: [edited, opened, synchronize, reopened]
+    branches: [master]
+  pull_request_review:
+    types: [submitted, edited]
+    branches: [master]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check if team approved
+        uses: joaomdmoura/actiontest@v0.9
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          team: '["@joaomdmoura"]'
