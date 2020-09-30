@@ -4,11 +4,9 @@ inputs:
   reviews: 
     description: 'List of reviews in the PR so far'
     required: true
-    default: []
   team: 
     description: 'List of handles for team members'
     required: true
-    default: []
 outputs:
   reviewed: 
     description: "Boolean indicating if it's reviewed or not."
