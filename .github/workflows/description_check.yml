@@ -1,0 +1,16 @@
+name: Check PR description
+
+on:
+  pull_request:
+    types: [edited, opened, reopened, 'synchronize']
+    branches: [master]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check PR description
+        uses: joaomdmoura/actiontest@v0.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
