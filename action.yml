@@ -1,0 +1,12 @@
+name: 'PR Description Check'
+description: 'Check if PR have a valid PR description that is not equal the template'
+inputs:
+  GITHUB_TOKEN: 
+    description: 'Github Token'
+    required: true
+  PR_TEMPLATE_PATH: 
+    description: 'Path for the PR template file in the repo'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
