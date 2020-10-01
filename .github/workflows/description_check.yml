@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check PR description
-        uses: joaomdmoura/actiontest@v0.4
+        uses: joaomdmoura/actiontest@v0.5
         with:
           PR_TEMPLATE_PATH: 'pull_request_template.md'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
