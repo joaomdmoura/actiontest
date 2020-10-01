@@ -13,5 +13,5 @@ jobs:
       - name: Check PR description
         uses: joaomdmoura/actiontest@v0.4
         with:
-          PR_TEMPLATE_PATH: 'pull_request_template.md'
+          PR_TEMPLATE_PATH: './pull_request_template.md'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
